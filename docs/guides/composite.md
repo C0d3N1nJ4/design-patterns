@@ -40,7 +40,7 @@ classDiagram
     }
     FileNode <|.. Document
     FileNode <|.. Directory
-    Directory o--> FileNode : contains
+    Directory o-- FileNode : contains
 ```
 
 ## Try the test and explore

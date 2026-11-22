@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 class DesignPatternsApplicationTests {
     @Test
-    void cliListsAllPatternFamilies() {
+    void cliListsAllImplementedPatternFamilies() {
         var output = new ByteArrayOutputStream();
         var original = System.out;
         try {
@@ -19,8 +19,10 @@ class DesignPatternsApplicationTests {
             System.setOut(original);
         }
         var text = output.toString(StandardCharsets.UTF_8);
+        assertTrue(text.contains("All 23 GoF patterns implemented"));
         assertTrue(text.contains("CREATIONAL (5)"));
         assertTrue(text.contains("STRUCTURAL (7)"));
         assertTrue(text.contains("BEHAVIORAL (11)"));
+        assertTrue(text.contains("docs/USER_GUIDE.md"));
     }
 }

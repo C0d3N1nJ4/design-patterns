@@ -1,72 +1,63 @@
-# Java design patterns — user guide
+# Java Design Patterns — user guide
 
-Learn by choosing a problem, running a small example, inspecting its UML and exploring its JUnit tests. **14 of the 23 GoF patterns** currently have executable examples.
+Learn by picking a real problem, running an example and reading the accompanying tests. This project includes **all 23 GoF patterns**: five creational, seven structural and eleven behavioral. None of the examples require databases, containers or external credentials.
 
-## Getting started
+## Set up
 
-1. Install JDK 25. Run `java -version` and ensure it reports 25.
-2. Clone this repository and open a terminal in its root.
-3. Run `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`) to compile, test and check style.
-4. Pick a lesson below and run the sample command.
+1. Install JDK 25 and check with `java -version`.
+2. Clone the repository and open a terminal in its root.
+3. Run `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`).
+4. Choose a guide below and use its exact example command.
 
-The initial Maven build downloads dependencies. The example applications do not require any external infrastructure.
+## Choose a lesson based on your problem
 
-## Choose by your problem
+### Creational — creating objects
 
-| Problem | Pattern and user guide |
+- [Builder](guides/builder.md), [Singleton](guides/singleton.md), [Factory Method](guides/factory-method.md), [Abstract Factory](guides/abstract-factory.md), [Prototype](guides/prototype.md)
+
+### Structural — composing objects
+
+- [Adapter](guides/adapter.md), [Bridge](guides/bridge.md), [Composite](guides/composite.md), [Decorator](guides/decorator.md), [Facade](guides/facade.md), [Flyweight](guides/flyweight.md), [Proxy](guides/proxy.md)
+
+### Behavioral — coordinating behavior
+
+- [Strategy](guides/strategy.md) — swap algorithms dynamically
+- [Chain of Responsibility](guides/chain-of-responsibility.md) — escalate requests through handlers
+
+| Problem | Read this lesson |
 | --- | --- |
-| Swap behavior at runtime | [Strategy](guides/strategy.md) |
-| Configure optional values cleanly | [Builder](guides/builder.md) |
-| Escalate approval requests | [Chain of Responsibility](guides/chain-of-responsibility.md) |
-| Share one immutable configuration instance | [Singleton](guides/singleton.md) |
-| Let subclasses choose one product | [Factory Method](guides/factory-method.md) |
-| Create matching families of objects | [Abstract Factory](guides/abstract-factory.md) |
-| Customize copies of existing objects | [Prototype](guides/prototype.md) |
-| Integrate an incompatible legacy API | [Adapter](guides/adapter.md) |
-| Vary abstractions and implementations independently | [Bridge](guides/bridge.md) |
-| Treat individual and grouped objects alike | [Composite](guides/composite.md) |
-| Add optional behavior by wrapping objects | [Decorator](guides/decorator.md) |
-| Simplify a multi-service workflow | [Facade](guides/facade.md) |
-| Share repeated immutable data efficiently | [Flyweight](guides/flyweight.md) |
-| Control access through an intermediary | [Proxy](guides/proxy.md) |
+| Turn requests into objects and support undo | [Command](guides/command.md) |
+| Evaluate a small domain language | [Interpreter](guides/interpreter.md) |
+| Traverse elements without exposing collection internals | [Iterator](guides/iterator.md) |
+| Coordinate collaborating objects through one hub | [Mediator](guides/mediator.md) |
+| Restore earlier state without exposing mutable internals | [Memento](guides/memento.md) |
+| Notify subscribers when an event happens | [Observer](guides/observer.md) |
+| Represent legal behavior based on lifecycle state | [State](guides/state.md) |
+| Keep an algorithm fixed while varying specific steps | [Template Method](guides/template-method.md) |
+| Add operations to a stable hierarchy without modifying its types | [Visitor](guides/visitor.md) |
 
-## Run the structural-pattern examples
+## Run the new behavioral demos
 
-After `./mvnw compile`, copy a command:
+After `./mvnw compile`:
 
 ```bash
-java -cp target/classes com.design.patterns.structural.adapter.AdapterDemo
-java -cp target/classes com.design.patterns.structural.bridge.BridgeDemo
-java -cp target/classes com.design.patterns.structural.composite.CompositeDemo
-java -cp target/classes com.design.patterns.structural.decorator.DecoratorDemo
-java -cp target/classes com.design.patterns.structural.facade.FacadeDemo
-java -cp target/classes com.design.patterns.structural.flyweight.FlyweightDemo
-java -cp target/classes com.design.patterns.structural.proxy.ProxyDemo
+java -cp target/classes com.design.patterns.behavioral.command.CommandDemo
+java -cp target/classes com.design.patterns.behavioral.interpreter.InterpreterDemo
+java -cp target/classes com.design.patterns.behavioral.iterator.IteratorDemo
+java -cp target/classes com.design.patterns.behavioral.mediator.MediatorDemo
+java -cp target/classes com.design.patterns.behavioral.memento.MementoDemo
+java -cp target/classes com.design.patterns.behavioral.observer.ObserverDemo
+java -cp target/classes com.design.patterns.behavioral.state.StateDemo
+java -cp target/classes com.design.patterns.behavioral.templatemethod.TemplateMethodDemo
+java -cp target/classes com.design.patterns.behavioral.visitor.VisitorDemo
 ```
 
-Each pattern guide includes the exact expected output.
+Each pattern guide gives the expected output, UML diagram, tests and trade-offs.
 
-## Learn from tests
+## Testing and troubleshooting
 
-Run all unit tests and Checkstyle with `./mvnw clean verify`. Focus on a particular pattern with:
+Run all tests and Checkstyle with `./mvnw clean verify`; target a lesson with `./mvnw -Dtest=CommandTest test` (replace the test class name with the one in your chosen guide).
 
-```bash
-./mvnw -Dtest=AdapterTest test
-./mvnw -Dtest=BridgeTest test
-./mvnw -Dtest=CompositeTest test
-./mvnw -Dtest=DecoratorTest test
-./mvnw -Dtest=FacadeTest test
-./mvnw -Dtest=FlyweightTest test
-./mvnw -Dtest=ProxyTest test
-```
+If Java is rejected, check `JAVA_HOME` points to JDK 25. If `java -cp` cannot find a class, compile first and copy the complete class name. The first Maven run needs internet access for its dependencies, but all compiled examples are local.
 
-Tests are organized under `src/test/java/com/design/patterns/`. Read the test cases, predict how invalid inputs behave and try extending a sample.
-
-## Troubleshooting
-
-- **Java or Maven version error:** check that `JAVA_HOME` and `java -version` use JDK 25.
-- **Permission denied for `./mvnw`:** run `bash mvnw clean verify` or restore execute permission.
-- **Class not found:** compile before launching a demo; copy the fully qualified class name exactly.
-- **Dependency download error:** verify Maven repository access. The wrapper JAR remains committed to support reliable bootstrap.
-
-To see what's planned next, read the [roadmap](ROADMAP.md).
+See the [roadmap](ROADMAP.md) for upcoming enterprise topics, and [contribution guidelines](CONTRIBUTING_EXAMPLES.md) for how to add a lesson.

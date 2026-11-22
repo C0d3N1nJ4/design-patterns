@@ -57,7 +57,7 @@ classDiagram
         +sunroof(enabled) Builder
         +build() Car
     }
-    Car +-- Builder : nested builder
+    Car ..> Builder : declares nested type
     Builder ..> Car : creates
 ```
 
