@@ -1,0 +1,10 @@
+{
+  "name": "design-patterns-documentation-checks",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "mermaid": "12.3.0",
+    "jsdom": "26.1.0"
+  }
+}

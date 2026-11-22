@@ -9,6 +9,14 @@ Learn by picking a real problem, running an example and reading the accompanying
 3. Run `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`).
 4. Choose a guide below and use its exact example command.
 
+## Find your next lesson
+
+- [Decision guide](DECISION_GUIDE.md) — begin with the problem
+- [28-pattern catalog](PATTERN_CATALOG.md) — browse all patterns by family
+- [Comparison matrix](PATTERN_COMPARISON.md) — understand trade-offs
+- [Learning paths](LEARNING_PATHS.md) — beginner, architecture and enterprise tracks
+- [Runnable command index](RUN_EXAMPLES.md) — copy and execute every demo
+
 ## Choose a lesson based on your problem
 
 ### Creational — creating objects

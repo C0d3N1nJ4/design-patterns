@@ -30,3 +30,19 @@ jobs:
         run: java -cp target/classes com.design.patterns.DesignPatternsApplication
       - name: Verify optional Spring DI integration
         run: ./mvnw --batch-mode --no-transfer-progress -Pspring-integration clean verify
+
+  documentation:
+    name: Documentation links and Mermaid syntax
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install documentation parser
+        run: npm install --prefix .github/docs-validation --no-audit --no-fund
+      - name: Validate local links, lesson coverage and Mermaid diagrams
+        run: node .github/docs-validation/validate.mjs
