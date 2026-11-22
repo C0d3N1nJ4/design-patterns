@@ -18,7 +18,7 @@ function visit(directory) {
 }
 visit(path.join(root, 'docs'));
 files.push(path.join(root, 'README.md'));
-mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
+mermaid.initialize({ startOnLoad: false, securityLevel: 'none' });
 
 let diagrams = 0;
 let links = 0;
