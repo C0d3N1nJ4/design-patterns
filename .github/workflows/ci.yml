@@ -28,3 +28,5 @@ jobs:
         run: ./mvnw --batch-mode --no-transfer-progress clean verify
       - name: Run catalog example
         run: java -cp target/classes com.design.patterns.DesignPatternsApplication
+      - name: Verify optional Spring DI integration
+        run: ./mvnw --batch-mode --no-transfer-progress -Pspring-integration clean verify
