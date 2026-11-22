@@ -41,4 +41,10 @@ java -cp target/classes com.design.patterns.DesignPatternsApplication
 - [Contributor standards](docs/CONTRIBUTING_EXAMPLES.md)
 - [Mermaid UML notation](docs/UML.md)
 
-Enterprise and Spring-specific examples are planned as optional follow-up work; they are not included in the GoF count.
+## Enterprise Java extensions
+
+Five additional, runnable **non-GoF** patterns are available: [Repository](docs/enterprise/repository.md), [Specification](docs/enterprise/specification.md), [Retry](docs/enterprise/retry.md), [Circuit Breaker](docs/enterprise/circuit-breaker.md) and [CQRS](docs/enterprise/cqrs.md).
+
+Start with the [enterprise learning path](docs/enterprise/README.md). The [Spring Framework integration](docs/enterprise/spring-integration.md) is optional and enabled with `-Pspring-integration`; the standard Maven build remains framework-free.
+
+Enterprise patterns are **not included** in the 23 GoF total.

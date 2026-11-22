@@ -78,4 +78,47 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <!-- Opt-in example only: the 23 GoF and five enterprise demos stay framework-free. -->
+        <profile>
+            <id>spring-integration</id>
+            <properties>
+                <spring.framework.version>7.0.10</spring.framework.version>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring-context</artifactId>
+                    <version>${spring.framework.version}</version>
+                </dependency>
+            </dependencies>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <version>3.6.1</version>
+                        <executions>
+                            <execution>
+                                <id>spring-example-source</id>
+                                <phase>generate-sources</phase>
+                                <goals><goal>add-source</goal></goals>
+                                <configuration>
+                                    <sources><source>src/spring/java</source></sources>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>spring-example-test</id>
+                                <phase>generate-test-sources</phase>
+                                <goals><goal>add-test-source</goal></goals>
+                                <configuration>
+                                    <sources><source>src/spring-test/java</source></sources>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>

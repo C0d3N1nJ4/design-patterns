@@ -1,23 +1,17 @@
-# Roadmap
+# Implementation roadmap
 
-This project teaches all **23 classic Gang of Four patterns** with executable Java 25 demos, JUnit tests, UML and [user-focused guides](USER_GUIDE.md).
+Read the [user guide](USER_GUIDE.md) to run the examples and the [enterprise learning path](enterprise/README.md) for architecture patterns.
 
-| PR | Scope | Status |
+| PR | Work | Status |
 | --- | --- | --- |
-| #2 | Java 25, JUnit, CI and quality foundation | Merged |
-| #3 | Strategy, Builder and Chain of Responsibility | Merged |
-| #4 | Remaining four creational patterns | Merged |
-| #5 | All seven structural patterns and Maven cleanup | Merged |
-| #6 | Nine remaining behavioral patterns, tests and guides | In review |
-| #7 | Optional enterprise architecture and Java integrations | Planned |
-| #8 | Comparisons, navigation and full learning experience | Planned |
+| #2 | Java 25, JUnit, quality gates and catalog | Merged |
+| #3 | First three GoF patterns | Merged |
+| #4 | Complete all five creational GoF patterns | Merged |
+| #5 | Complete seven structural patterns and Maven cleanup | Merged |
+| #6 | Complete all eleven behavioral patterns and repair Mermaid diagrams | Merged |
+| #7 | Repository, Specification, Retry, Circuit Breaker, CQRS and optional Spring integration | Draft — awaiting review |
+| #8 | Pattern discovery, comparison matrix and polish across guides | Planned |
 
-## GoF coverage
+All **23 GoF patterns** are complete and run on plain Java 25. PR #7 adds five separate enterprise patterns and one optional Spring Framework wiring example. The GoF catalog still counts exactly 23; enterprise topics are supplementary.
 
-All 23 examples exist in this PR: **5 creational, 7 structural and 11 behavioral**. Each example is self-contained and can be run with Java 25 after `./mvnw compile`. The optional enterprise patterns are **not** part of the GoF count.
-
-The new behavioral guides: [Command](guides/command.md), [Interpreter](guides/interpreter.md), [Iterator](guides/iterator.md), [Mediator](guides/mediator.md), [Memento](guides/memento.md), [Observer](guides/observer.md), [State](guides/state.md), [Template Method](guides/template-method.md), [Visitor](guides/visitor.md).
-
-## Maven baseline
-
-The historical Spring application properties were removed in PR #5. The Maven Wrapper scripts and JAR remain committed so users can bootstrap consistently on Windows, Linux and macOS.
+The core dependency policy remains minimal: `./mvnw clean verify` must run without a Spring runtime, database or broker. The optional Spring profile is also exercised separately in CI.

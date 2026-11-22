@@ -60,4 +60,8 @@ Run all tests and Checkstyle with `./mvnw clean verify`; target a lesson with `.
 
 If Java is rejected, check `JAVA_HOME` points to JDK 25. If `java -cp` cannot find a class, compile first and copy the complete class name. The first Maven run needs internet access for its dependencies, but all compiled examples are local.
 
-See the [roadmap](ROADMAP.md) for upcoming enterprise topics, and [contribution guidelines](CONTRIBUTING_EXAMPLES.md) for how to add a lesson.
+## Continue with enterprise patterns
+
+After the 23 GoF patterns, the [enterprise learning path](enterprise/README.md) walks through Repository, Specification, Retry, Circuit Breaker and CQRS. Each example is runnable without external infrastructure. [Spring DI integration](enterprise/spring-integration.md) is optional and activated with a Maven profile.
+
+See the [roadmap](ROADMAP.md) for upcoming improvements, and [contribution guidelines](CONTRIBUTING_EXAMPLES.md) for how to add a lesson.
