@@ -1,62 +1,72 @@
 # Java design patterns — user guide
 
-This is a **hands-on learning guide**: choose a problem, execute an example and inspect its source and unit tests. No database, containers, cloud account or external APIs are needed.
+Learn by choosing a problem, running a small example, inspecting its UML and exploring its JUnit tests. **14 of the 23 GoF patterns** currently have executable examples.
 
-## Get started
+## Getting started
 
-1. Install JDK 25; confirm `java -version` reports 25.
-2. Clone the repository and open a terminal at its root.
-3. Run `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`). Maven downloads dependencies on the first run.
-4. Pick a lesson below and run the exact command in its guide.
+1. Install JDK 25. Run `java -version` and ensure it reports 25.
+2. Clone this repository and open a terminal in its root.
+3. Run `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`) to compile, test and check style.
+4. Pick a lesson below and run the sample command.
 
-## Choose by the problem you want to solve
+The initial Maven build downloads dependencies. The example applications do not require any external infrastructure.
 
-| I need to… | Pattern | Example |
-| --- | --- | --- |
-| Share photos through different interchangeable algorithms | [Strategy](guides/strategy.md) | Email, text, social |
-| Configure an immutable object with optional values | [Builder](guides/builder.md) | Car options |
-| Escalate a request until someone can approve | [Chain of Responsibility](guides/chain-of-responsibility.md) | Purchase approval |
-| Access a single shared, immutable settings snapshot | [Singleton](guides/singleton.md) | Default application settings |
-| Vary which product a common workflow creates | [Factory Method](guides/factory-method.md) | Email vs SMS notification |
-| Create a consistent *family* of products | [Abstract Factory](guides/abstract-factory.md) | Light vs dark UI widgets |
-| Make independent copies of a configured starting point | [Prototype](guides/prototype.md) | Report templates |
+## Choose by your problem
 
-These seven are implemented; the remaining 16 GoF patterns are [planned](ROADMAP.md).
+| Problem | Pattern and user guide |
+| --- | --- |
+| Swap behavior at runtime | [Strategy](guides/strategy.md) |
+| Configure optional values cleanly | [Builder](guides/builder.md) |
+| Escalate approval requests | [Chain of Responsibility](guides/chain-of-responsibility.md) |
+| Share one immutable configuration instance | [Singleton](guides/singleton.md) |
+| Let subclasses choose one product | [Factory Method](guides/factory-method.md) |
+| Create matching families of objects | [Abstract Factory](guides/abstract-factory.md) |
+| Customize copies of existing objects | [Prototype](guides/prototype.md) |
+| Integrate an incompatible legacy API | [Adapter](guides/adapter.md) |
+| Vary abstractions and implementations independently | [Bridge](guides/bridge.md) |
+| Treat individual and grouped objects alike | [Composite](guides/composite.md) |
+| Add optional behavior by wrapping objects | [Decorator](guides/decorator.md) |
+| Simplify a multi-service workflow | [Facade](guides/facade.md) |
+| Share repeated immutable data efficiently | [Flyweight](guides/flyweight.md) |
+| Control access through an intermediary | [Proxy](guides/proxy.md) |
 
-## Run the available examples
+## Run the structural-pattern examples
 
-Run `./mvnw compile` first, then any of these commands:
-
-```bash
-java -cp target/classes com.design.patterns.behavioral.strategy.StrategyDemo
-java -cp target/classes com.design.patterns.creational.builder.BuilderDemo
-java -cp target/classes com.design.patterns.behavioral.chainofresponsibility.ApprovalChainDemo
-java -cp target/classes com.design.patterns.creational.singleton.SingletonDemo
-java -cp target/classes com.design.patterns.creational.factorymethod.FactoryMethodDemo
-java -cp target/classes com.design.patterns.creational.abstractfactory.AbstractFactoryDemo
-java -cp target/classes com.design.patterns.creational.prototype.PrototypeDemo
-```
-
-Each lesson shows expected output and explicitly identifies simulated behavior (no real notification or approval service calls).
-
-## Learn from the tests
-
-Run all tests and Checkstyle with `./mvnw clean verify`. To focus on a lesson:
+After `./mvnw compile`, copy a command:
 
 ```bash
-./mvnw -Dtest=SingletonTest test
-./mvnw -Dtest=FactoryMethodTest test
-./mvnw -Dtest=AbstractFactoryTest test
-./mvnw -Dtest=PrototypeTest test
+java -cp target/classes com.design.patterns.structural.adapter.AdapterDemo
+java -cp target/classes com.design.patterns.structural.bridge.BridgeDemo
+java -cp target/classes com.design.patterns.structural.composite.CompositeDemo
+java -cp target/classes com.design.patterns.structural.decorator.DecoratorDemo
+java -cp target/classes com.design.patterns.structural.facade.FacadeDemo
+java -cp target/classes com.design.patterns.structural.flyweight.FlyweightDemo
+java -cp target/classes com.design.patterns.structural.proxy.ProxyDemo
 ```
 
-Also available: `StrategyTest`, `BuilderTest` and `ApprovalChainTest`. Try modifying the demo input, predicting the output and checking the matching test assertions.
+Each pattern guide includes the exact expected output.
 
-## Common setup problems
+## Learn from tests
 
-- **Wrong Java version:** confirm your JDK and `JAVA_HOME` both point to JDK 25.
-- **Permission denied on `mvnw`:** use `bash mvnw clean verify` on Unix or restore executable permission.
-- **Class not found:** run `./mvnw compile` before `java -cp target/classes`.
-- **Maven dependency download failure:** check the network or Maven mirror; running the compiled examples requires no external connection.
+Run all unit tests and Checkstyle with `./mvnw clean verify`. Focus on a particular pattern with:
 
-Want to understand class relationships? Every guide includes a Mermaid UML diagram. Want to contribute? Read the [example standards](CONTRIBUTING_EXAMPLES.md).
+```bash
+./mvnw -Dtest=AdapterTest test
+./mvnw -Dtest=BridgeTest test
+./mvnw -Dtest=CompositeTest test
+./mvnw -Dtest=DecoratorTest test
+./mvnw -Dtest=FacadeTest test
+./mvnw -Dtest=FlyweightTest test
+./mvnw -Dtest=ProxyTest test
+```
+
+Tests are organized under `src/test/java/com/design/patterns/`. Read the test cases, predict how invalid inputs behave and try extending a sample.
+
+## Troubleshooting
+
+- **Java or Maven version error:** check that `JAVA_HOME` and `java -version` use JDK 25.
+- **Permission denied for `./mvnw`:** run `bash mvnw clean verify` or restore execute permission.
+- **Class not found:** compile before launching a demo; copy the fully qualified class name exactly.
+- **Dependency download error:** verify Maven repository access. The wrapper JAR remains committed to support reliable bootstrap.
+
+To see what's planned next, read the [roadmap](ROADMAP.md).

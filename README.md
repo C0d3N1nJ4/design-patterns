@@ -1,52 +1,43 @@
 # Java Design Patterns — hands-on Java 25 guide
 
-Learn Java design patterns with **runnable examples, tests and practical user guides**. No database, Docker, cloud credentials or live external services are required.
+Learn design patterns through **runnable examples, focused tests, Mermaid UML and practical user guides**. No database, Docker or cloud credentials are needed.
 
-## Start here
+## Quick start
 
-1. Install JDK 25 and verify with `java -version`.
-2. Clone this repository and change into its directory.
-3. Build and test everything:
+1. Install JDK 25 and confirm `java -version`.
+2. Clone this repository and open its root.
+3. Build and run all tests with `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`).
+4. Choose a lesson from the [user guide](docs/USER_GUIDE.md), then run the demo it describes.
 
-```bash
-./mvnw clean verify
-```
-
-4. Choose a pattern below, then follow its guide. On Windows use `mvnw.cmd clean verify` instead.
-
-## Choose a lesson
-
-| Problem | Pattern | Runnable demo |
-| --- | --- | --- |
-| Configuring a complex object | [Builder](docs/guides/builder.md) | `com.design.patterns.creational.builder.BuilderDemo` |
-| Shared immutable configuration | [Singleton](docs/guides/singleton.md) | `com.design.patterns.creational.singleton.SingletonDemo` |
-| Creating different products in a shared workflow | [Factory Method](docs/guides/factory-method.md) | `com.design.patterns.creational.factorymethod.FactoryMethodDemo` |
-| Creating compatible groups of products | [Abstract Factory](docs/guides/abstract-factory.md) | `com.design.patterns.creational.abstractfactory.AbstractFactoryDemo` |
-| Copying a configured starting object | [Prototype](docs/guides/prototype.md) | `com.design.patterns.creational.prototype.PrototypeDemo` |
-| Choosing algorithms dynamically | [Strategy](docs/guides/strategy.md) | `com.design.patterns.behavioral.strategy.StrategyDemo` |
-| Escalating decisions through handlers | [Chain of Responsibility](docs/guides/chain-of-responsibility.md) | `com.design.patterns.behavioral.chainofresponsibility.ApprovalChainDemo` |
-
-To run any demo after compiling, paste its fully qualified class name after `java -cp target/classes`:
+For example:
 
 ```bash
-java -cp target/classes com.design.patterns.creational.factorymethod.FactoryMethodDemo
+java -cp target/classes com.design.patterns.structural.adapter.AdapterDemo
 ```
 
-**7 of the 23 classic GoF patterns are implemented.** The CLI lists the entire planned catalog; it does not execute every pattern:
+Expected output: `LEGACY charged 1250 cents`. This is a simulated integration, not a real payment.
+
+## Available patterns
+
+**14 of 23 GoF patterns are implemented** with runnable examples and focused tests.
+
+- **Creational (5/5):** [Builder](docs/guides/builder.md), [Singleton](docs/guides/singleton.md), [Factory Method](docs/guides/factory-method.md), [Abstract Factory](docs/guides/abstract-factory.md), [Prototype](docs/guides/prototype.md)
+- **Structural (7/7):** [Adapter](docs/guides/adapter.md), [Bridge](docs/guides/bridge.md), [Composite](docs/guides/composite.md), [Decorator](docs/guides/decorator.md), [Facade](docs/guides/facade.md), [Flyweight](docs/guides/flyweight.md), [Proxy](docs/guides/proxy.md)
+- **Behavioral (2/11):** [Strategy](docs/guides/strategy.md), [Chain of Responsibility](docs/guides/chain-of-responsibility.md)
+
+Find a suitable pattern using the [problem-to-pattern table](docs/USER_GUIDE.md). Every lesson includes exact run commands, expected output, UML, tests, use cases and limitations.
+
+The catalog executable lists all 23 *planned* GoF names, including the 9 not yet implemented:
 
 ```bash
 java -cp target/classes com.design.patterns.DesignPatternsApplication
 ```
 
-## How to learn
-
-Start with the [User Guide](docs/USER_GUIDE.md). Every pattern guide explains the motivating problem, the implementation, the exact command to run, the expected output, the Mermaid UML, edge cases, and when not to use it. Explore the JUnit tests to understand the behavior.
-
 ## More resources
 
-- [User Guide](docs/USER_GUIDE.md)
-- [Roadmap](docs/ROADMAP.md)
+- [Hands-on user guide](docs/USER_GUIDE.md)
+- [Delivery roadmap](docs/ROADMAP.md)
 - [Contributing examples](docs/CONTRIBUTING_EXAMPLES.md)
-- [UML diagram guide](docs/UML.md)
+- [Reading Mermaid UML](docs/UML.md)
 
-The examples use plain Java 25. Enterprise and Spring integrations will be documented as optional future lessons rather than prerequisites.
+All current examples use plain Java. Optional enterprise Spring integrations are planned separately.
