@@ -59,4 +59,4 @@ Open the Java classes in `src/main/java/com/design/patterns/enterprise/circuitbr
 
 Use it when a downstream dependency frequently fails. This teaching version counts all exceptions and serializes calls; production breakers should classify failures, limit concurrent probes, emit metrics and be paired with explicit timeouts. Consider Resilience4j or Spring-native resilience libraries for real services.
 
-Explore the [enterprise learning path](README.md), or return to the [main user guide](../USER_GUIDE.md).
+Explore the [enterprise learning path](README.md), or return to the [main user guide](../user-guide.md).

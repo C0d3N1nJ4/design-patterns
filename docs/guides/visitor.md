@@ -62,4 +62,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/vi
 
 Useful when your element hierarchy is stable but you add multiple operations. Adding new item types requires updating visitors; sealed types and pattern matching may be simpler for small models.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

@@ -1,6 +1,6 @@
 # Learning paths — from first pattern to enterprise Java
 
-All exercises use JDK 25. Run `./mvnw clean verify` once, then copy the demo command from each linked guide or the [runnable index](RUN_EXAMPLES.md).
+All exercises use JDK 25. Run `./mvnw clean verify` once, then copy the demo command from each linked guide or the [runnable index](run-examples.md).
 
 ## Track A — first steps (about six lessons)
 
@@ -50,4 +50,4 @@ All exercises use JDK 25. Run `./mvnw clean verify` once, then copy the demo com
 4. Run the focused JUnit test, then change one input and add one edge-case assertion.
 5. Decide whether the pattern solves a real problem or introduces unnecessary complexity.
 
-Use the [comparison matrix](PATTERN_COMPARISON.md) before using patterns in your own service.
+Use the [comparison matrix](pattern-comparison.md) before using patterns in your own service.

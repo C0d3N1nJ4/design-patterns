@@ -55,4 +55,4 @@ Open the Java classes in `src/main/java/com/design/patterns/enterprise/retry/` a
 
 Retry only classified transient errors. For payments and commands, use idempotency keys to prevent duplicate effects. Production-grade retry should include jitter, deadlines, metrics, cancellation and overall request budgets. Don't retry validation or authorization errors.
 
-Explore the [enterprise learning path](README.md), or return to the [main user guide](../USER_GUIDE.md).
+Explore the [enterprise learning path](README.md), or return to the [main user guide](../user-guide.md).

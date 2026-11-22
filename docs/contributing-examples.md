@@ -25,8 +25,8 @@ Prefer meaningful return values and state assertions over testing println statem
 
 ## Guide navigation and CI verification
 
-- Link new guides from the [catalog](PATTERN_CATALOG.md) and [run index](RUN_EXAMPLES.md).
-- Update the [decision guide](DECISION_GUIDE.md) or [comparison matrix](PATTERN_COMPARISON.md) when the pattern changes a decision trade-off.
+- Link new guides from the [catalog](pattern-catalog.md) and [run index](run-examples.md).
+- Update the [decision guide](decision-guide.md) or [comparison matrix](pattern-comparison.md) when the pattern changes a decision trade-off.
 - Cover the **problem, executable demo, expected output, tested behavior, UML diagram and limitations**.
 - Mermaid diagrams must pass the parser pinned in `.github/docs-validation/package.json`.
 - Use relative paths for links to other repository documents.

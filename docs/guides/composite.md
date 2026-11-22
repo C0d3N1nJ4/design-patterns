@@ -55,4 +55,4 @@ Model nested menus, organization units, product bundles or folder-like document 
 
 This educational example is intended for acyclic trees. Do not insert a directory into itself or create cycles; production models should enforce acyclicity.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.

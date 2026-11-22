@@ -56,4 +56,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/te
 
 Use when several workflows follow one stable algorithm. Overridden hooks create inheritance coupling; prefer composition if the variation is highly dynamic.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

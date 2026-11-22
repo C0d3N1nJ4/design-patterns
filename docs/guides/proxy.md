@@ -50,4 +50,4 @@ Add authorization checks, caching, lazy loading or request tracing to an existin
 
 The boolean permission flag is for demonstration only. Real systems must authorize every request against authenticated identity and document-level access policies.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.
