@@ -52,4 +52,4 @@ Share repeatable, immutable rendering data or repeated lookup metadata rather th
 
 A flyweight cache can grow without bound. In production, measure cardinality and add bounded eviction where appropriate.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.

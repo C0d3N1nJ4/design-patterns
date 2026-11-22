@@ -57,4 +57,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/co
 
 Command supports queued or undoable actions such as editor operations. Avoid assuming undo can reverse arbitrary external effects; design compensation and idempotency explicitly.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

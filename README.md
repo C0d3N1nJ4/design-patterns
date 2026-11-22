@@ -6,11 +6,11 @@ A hands-on collection of **all 23 Gang of Four patterns + 5 enterprise Java patt
 
 | Goal | Start here |
 | --- | --- |
-| Pick a pattern for a problem | [Decision guide](docs/DECISION_GUIDE.md) |
-| Browse every example | [Pattern catalog](docs/PATTERN_CATALOG.md) |
-| Compare alternatives | [Comparison matrix](docs/PATTERN_COMPARISON.md) |
-| Follow structured lessons | [Learning paths](docs/LEARNING_PATHS.md) |
-| Copy every runnable command | [Run examples](docs/RUN_EXAMPLES.md) |
+| Pick a pattern for a problem | [Decision guide](docs/decision-guide.md) |
+| Browse every example | [Pattern catalog](docs/pattern-catalog.md) |
+| Compare alternatives | [Comparison matrix](docs/pattern-comparison.md) |
+| Follow structured lessons | [Learning paths](docs/learning-paths.md) |
+| Copy every runnable command | [Run examples](docs/run-examples.md) |
 
 
 ## Get started
@@ -37,7 +37,7 @@ On Windows use `mvnw.cmd clean verify` for the build. None of the sample applica
 - **Structural (7/7):** [Adapter](docs/guides/adapter.md), [Bridge](docs/guides/bridge.md), [Composite](docs/guides/composite.md), [Decorator](docs/guides/decorator.md), [Facade](docs/guides/facade.md), [Flyweight](docs/guides/flyweight.md), [Proxy](docs/guides/proxy.md)
 - **Behavioral (11/11):** [Strategy](docs/guides/strategy.md), [Chain of Responsibility](docs/guides/chain-of-responsibility.md), [Command](docs/guides/command.md), [Interpreter](docs/guides/interpreter.md), [Iterator](docs/guides/iterator.md), [Mediator](docs/guides/mediator.md), [Memento](docs/guides/memento.md), [Observer](docs/guides/observer.md), [State](docs/guides/state.md), [Template Method](docs/guides/template-method.md), [Visitor](docs/guides/visitor.md)
 
-The [user guide](docs/USER_GUIDE.md) helps you choose a pattern based on the problem and provides all runnable commands. Each lesson includes expected output, tests, UML, practical applications and guidance on when **not** to use the pattern.
+The [user guide](docs/user-guide.md) helps you choose a pattern based on the problem and provides all runnable commands. Each lesson includes expected output, tests, UML, practical applications and guidance on when **not** to use the pattern.
 
 For a simple catalog listing:
 
@@ -47,16 +47,16 @@ java -cp target/classes com.design.patterns.DesignPatternsApplication
 
 ## More
 
-- [Pattern catalog](docs/PATTERN_CATALOG.md)
-- [Decision guide](docs/DECISION_GUIDE.md)
-- [Comparison matrix](docs/PATTERN_COMPARISON.md)
-- [Learning paths](docs/LEARNING_PATHS.md)
-- [Run examples](docs/RUN_EXAMPLES.md)
+- [Pattern catalog](docs/pattern-catalog.md)
+- [Decision guide](docs/decision-guide.md)
+- [Comparison matrix](docs/pattern-comparison.md)
+- [Learning paths](docs/learning-paths.md)
+- [Run examples](docs/run-examples.md)
 
-- [User guide](docs/USER_GUIDE.md)
-- [Roadmap](docs/ROADMAP.md)
-- [Contributor standards](docs/CONTRIBUTING_EXAMPLES.md)
-- [Mermaid UML notation](docs/UML.md)
+- [User guide](docs/user-guide.md)
+- [Roadmap](docs/roadmap.md)
+- [Contributor standards](docs/contributing-examples.md)
+- [Mermaid UML notation](docs/uml.md)
 
 ## Enterprise Java extensions
 

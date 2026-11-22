@@ -55,4 +55,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/ob
 
 Use in-process publish/subscribe for decoupled updates. These callbacks execute synchronously and a listener exception can interrupt delivery; production messaging needs explicit error and delivery policies.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

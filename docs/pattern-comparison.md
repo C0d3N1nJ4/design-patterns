@@ -31,4 +31,4 @@ Before introducing a pattern, ask whether a plain constructor, record, enum, int
 - **Reliable payments or notifications:** use Retry only for classified transient failures and ensure idempotency. Circuit Breaker may reduce load on a failing upstream. Neither replaces persistence or recovery.
 - **Multiple read projections for event-driven writes:** CQRS may help, but use a simpler Repository model until read/write differences justify it.
 
-Follow the [decision guide](DECISION_GUIDE.md) or [learning paths](LEARNING_PATHS.md) for a guided route.
+Follow the [decision guide](decision-guide.md) or [learning paths](learning-paths.md) for a guided route.

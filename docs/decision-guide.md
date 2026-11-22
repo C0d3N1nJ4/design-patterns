@@ -23,7 +23,7 @@ flowchart TD
     E --> Q["Failing dependency? Circuit Breaker"]
 ```
 
-Mermaid nodes are a **starting point**, not a comprehensive mapping. For the complete set of 28, see the [pattern catalog](PATTERN_CATALOG.md).
+Mermaid nodes are a **starting point**, not a comprehensive mapping. For the complete set of 28, see the [pattern catalog](pattern-catalog.md).
 
 ## Questions that identify the right family
 
@@ -70,4 +70,4 @@ Mermaid nodes are a **starting point**, not a comprehensive mapping. For the com
 
 ## Before adding a pattern
 
-Choose the simplest design that meets your use cases and tests. A Java record, sealed interface, lambda or conditional may be more maintainable than a formal pattern. The [comparison matrix](PATTERN_COMPARISON.md) covers alternatives and hidden costs.
+Choose the simplest design that meets your use cases and tests. A Java record, sealed interface, lambda or conditional may be more maintainable than a formal pattern. The [comparison matrix](pattern-comparison.md) covers alternatives and hidden costs.

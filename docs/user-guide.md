@@ -11,11 +11,11 @@ Learn by picking a real problem, running an example and reading the accompanying
 
 ## Find your next lesson
 
-- [Decision guide](DECISION_GUIDE.md) — begin with the problem
-- [28-pattern catalog](PATTERN_CATALOG.md) — browse all patterns by family
-- [Comparison matrix](PATTERN_COMPARISON.md) — understand trade-offs
-- [Learning paths](LEARNING_PATHS.md) — beginner, architecture and enterprise tracks
-- [Runnable command index](RUN_EXAMPLES.md) — copy and execute every demo
+- [Decision guide](decision-guide.md) — begin with the problem
+- [28-pattern catalog](pattern-catalog.md) — browse all patterns by family
+- [Comparison matrix](pattern-comparison.md) — understand trade-offs
+- [Learning paths](learning-paths.md) — beginner, architecture and enterprise tracks
+- [Runnable command index](run-examples.md) — copy and execute every demo
 
 ## Choose a lesson based on your problem
 
@@ -72,4 +72,4 @@ If Java is rejected, check `JAVA_HOME` points to JDK 25. If `java -cp` cannot fi
 
 After the 23 GoF patterns, the [enterprise learning path](enterprise/README.md) walks through Repository, Specification, Retry, Circuit Breaker and CQRS. Each example is runnable without external infrastructure. [Spring DI integration](enterprise/spring-integration.md) is optional and activated with a Maven profile.
 
-See the [roadmap](ROADMAP.md) for upcoming improvements, and [contribution guidelines](CONTRIBUTING_EXAMPLES.md) for how to add a lesson.
+See the [roadmap](roadmap.md) for upcoming improvements, and [contribution guidelines](contributing-examples.md) for how to add a lesson.

@@ -56,4 +56,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/it
 
 Java already supplies Iterable and Iterator; use them rather than inventing new cursor APIs. The demo's iterator is a read-only snapshot, not a live view.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

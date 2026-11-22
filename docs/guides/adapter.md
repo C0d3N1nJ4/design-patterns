@@ -53,4 +53,4 @@ Integrate an older payment, CRM or accounting API through an adapter at the infr
 
 Do not silently round monetary amounts or use Adapter when both APIs already have the same contract.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.

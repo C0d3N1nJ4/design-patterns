@@ -65,4 +65,4 @@ Open the Java classes in `src/main/java/com/design/patterns/enterprise/cqrs/` an
 
 CQRS is useful when writes enforce business invariants and reads need independently optimized representations. This is an in-memory teaching example, NOT a durable ledger. Production payment systems need transactional event storage, concurrency controls, reliable delivery, projection checkpoints and reconciliation. Users may observe stale reads until projection occurs.
 
-Explore the [enterprise learning path](README.md), or return to the [main user guide](../USER_GUIDE.md).
+Explore the [enterprise learning path](README.md), or return to the [main user guide](../user-guide.md).

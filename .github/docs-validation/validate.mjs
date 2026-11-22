@@ -30,6 +30,15 @@ visit(path.join(root, 'docs'));
 files.push(path.join(root, 'README.md'));
 mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
 
+
+// Preserve GitHub's README.md convention; require lowercase kebab-case for other docs.
+for (const file of files) {
+  const name = path.basename(file);
+  if (name !== 'README.md' && !/^[a-z0-9]+(?:-[a-z0-9]+)*\.md$/.test(name)) {
+    errors.push(path.relative(root, file) + ': filename must use lowercase kebab-case');
+  }
+}
+
 let diagrams = 0;
 let links = 0;
 for (const file of files) {
