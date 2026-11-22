@@ -39,7 +39,7 @@ classDiagram
   +say(message)
   +inbox() List
  }
- ChatRoom o--> Member : coordinates
+ ChatRoom o-- Member : coordinates
  Member --> ChatRoom : delegates
 ```
 

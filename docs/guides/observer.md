@@ -40,7 +40,7 @@ classDiagram
   <<interface>>
   +accept(orderId)
  }
- OrderEvents o--> Consumer : listeners
+ OrderEvents o-- Consumer : listeners
 ```
 
 ## Verify and experiment

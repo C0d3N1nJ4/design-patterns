@@ -37,7 +37,7 @@ classDiagram
         <<record>>
         +render(character, position) String
     }
-    TextStyleFactory o--> TextStyle : caches
+    TextStyleFactory o-- TextStyle : caches
 ```
 
 ## Try the test and explore

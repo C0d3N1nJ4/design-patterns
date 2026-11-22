@@ -45,7 +45,7 @@ classDiagram
   +undo(editor)
  }
  Editor --> Snapshot : creates
- History o--> Snapshot : stores
+ History o-- Snapshot : stores
  History --> Editor : restores
 ```
 
