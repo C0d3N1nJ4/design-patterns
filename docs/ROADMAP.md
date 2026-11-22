@@ -1,27 +1,33 @@
 # Implementation roadmap
 
-Follow the lessons in the [user guide](USER_GUIDE.md). This is the delivery plan for a **23-pattern GoF collection** and additional enterprise Java examples.
+This repository is a hands-on [Java 25 user guide](USER_GUIDE.md) and executable collection of the 23 Gang of Four (GoF) patterns, plus optional enterprise examples.
 
 | PR | Outcome | State |
 | --- | --- | --- |
 | #2 | Java 25, catalog, JUnit, CI and quality foundation | Merged |
-| #3 | Strategy, Builder and Chain of Responsibility with demos, tests and learner guides | Draft — awaiting review |
-| #4 | Finish the five creational patterns | Planned |
-| #5 | Finish all seven structural patterns | Planned |
-| #6 | Finish all eleven behavioral patterns | Planned |
+| #3 | Strategy, Builder and Chain of Responsibility with runnable demos and user guides | Merged |
+| #4 | Singleton, Factory Method, Abstract Factory and Prototype | Draft — awaiting review |
+| #5 | Seven structural patterns | Planned |
+| #6 | Remaining nine behavioral patterns | Planned |
 | #7 | Enterprise examples: Repository, Specification, Retry, Circuit Breaker, CQRS and optional Spring integrations | Planned |
-| #8 | Catalog navigation, cross-pattern comparisons and polished learning experience | Planned |
+| #8 | Catalog navigation, comparisons and polished learning experience | Planned |
 
-## What you can use now
+## Learn what's implemented
 
-The three [working examples](USER_GUIDE.md) have deterministic local demos, JUnit tests and a Mermaid diagram in each guide. The CLI catalog lists the other 20 **planned** patterns; those are not yet implementations.
+Seven patterns have executable examples and step-by-step guides:
 
-## Why the original branches were adapted
+- [Builder](guides/builder.md)
+- [Singleton](guides/singleton.md)
+- [Factory Method](guides/factory-method.md)
+- [Abstract Factory](guides/abstract-factory.md)
+- [Prototype](guides/prototype.md)
+- [Strategy](guides/strategy.md)
+- [Chain of Responsibility](guides/chain-of-responsibility.md)
 
-The 2023 `behavioural-strategy-pattern`, `behavioural-chain-of-responsibility-pattern` and `creational-builder-pattern` branches supplied the original camera, approval-chain and car scenarios. Their examples were rebuilt into consistent lowercase Java packages with input validation and testable return values instead of interactive input or console-only logic.
+The CLI catalog includes the remaining sixteen **planned** patterns. Listing a pattern does not mean its implementation is complete.
 
-## Standard for future lessons
+## How new lessons are added
 
-Every pattern needs a motivating problem, an executable example without external services, focused unit tests including failure scenarios, UML, a real-world use case and a trade-off section. See [contributing examples](CONTRIBUTING_EXAMPLES.md).
+Every pattern includes a practical problem, dependency-free runnable example, expected output, JUnit tests (including failure scenarios), Mermaid UML and trade-offs. See [the example guide](CONTRIBUTING_EXAMPLES.md).
 
-The enterprise examples are separate from the 23 GoF patterns.
+The original 2023 experimental branches supplied the first three scenarios, recovered and refactored in PR #3. Future enterprise examples are distinct from the 23 GoF patterns.
