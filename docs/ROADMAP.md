@@ -1,36 +1,27 @@
 # Implementation roadmap
 
-This document tracks the target scope, **not** completed features. The 23 GoF patterns and the later enterprise examples will be implemented through focused PRs.
+Follow the lessons in the [user guide](USER_GUIDE.md). This is the delivery plan for a **23-pattern GoF collection** and additional enterprise Java examples.
 
-| PR | Workstream | Exit criteria | Status |
-| --- | --- | --- | --- |
-| #2 | Foundation | Java 25, Maven build, JUnit, static checks, CI, catalog and docs | In progress |
-| #3 | Recover earlier work | Strategy, Builder and Chain of Responsibility refactored, tested and documented | Planned |
-| #4 | Creational | All 5 GoF creational patterns implemented and tested | Planned |
-| #5 | Structural | All 7 GoF structural patterns implemented and tested | Planned |
-| #6 | Behavioral | All 11 GoF behavioral patterns implemented and tested | Planned |
-| #7 | Enterprise Java | Practical samples for Repository, Specification, Circuit Breaker, Retry, CQRS and Spring-oriented integration | Planned |
-| #8 | Learning experience | Pattern navigation, trade-off matrices, Mermaid UML and complete getting-started guides | Planned |
+| PR | Outcome | State |
+| --- | --- | --- |
+| #2 | Java 25, catalog, JUnit, CI and quality foundation | Merged |
+| #3 | Strategy, Builder and Chain of Responsibility with demos, tests and learner guides | Draft — awaiting review |
+| #4 | Finish the five creational patterns | Planned |
+| #5 | Finish all seven structural patterns | Planned |
+| #6 | Finish all eleven behavioral patterns | Planned |
+| #7 | Enterprise examples: Repository, Specification, Retry, Circuit Breaker, CQRS and optional Spring integrations | Planned |
+| #8 | Catalog navigation, cross-pattern comparisons and polished learning experience | Planned |
 
-## Recovery plan
+## What you can use now
 
-The repository includes pre-existing branches `behavioural-strategy-pattern`, `behavioural-chain-of-responsibility-pattern` and `creational-builder-pattern`. The original Strategy PR #1 is open. Reuse and review their code in PR #3; **do not blindly merge** all branches into the foundation.
+The three [working examples](USER_GUIDE.md) have deterministic local demos, JUnit tests and a Mermaid diagram in each guide. The CLI catalog lists the other 20 **planned** patterns; those are not yet implementations.
 
-## Definition of done for each pattern
+## Why the original branches were adapted
 
-1. A concrete problem and a deliberately simpler before-example.
-2. A small, runnable Java 25 implementation showing the pattern after refactoring.
-3. Focused JUnit 5 tests for success and failure scenarios.
-4. A Mermaid UML class or sequence diagram in the lesson README.
-5. Guidance on applicability, costs, alternatives and Java language features.
-6. No external database, broker or credentials; mock or fake integrations in tests.
-7. `./mvnw clean verify` and the GitHub Actions CI gate pass.
+The 2023 `behavioural-strategy-pattern`, `behavioural-chain-of-responsibility-pattern` and `creational-builder-pattern` branches supplied the original camera, approval-chain and car scenarios. Their examples were rebuilt into consistent lowercase Java packages with input validation and testable return values instead of interactive input or console-only logic.
 
-## Candidate enterprise topics
+## Standard for future lessons
 
-- Repository and Specification: domain filtering without coupling to persistence
-- Circuit Breaker and Retry: predictable service-failure recovery
-- CQRS: separating read and write models with in-memory adapters
-- Spring dependency injection and proxies: isolated optional modules only
+Every pattern needs a motivating problem, an executable example without external services, focused unit tests including failure scenarios, UML, a real-world use case and a trade-off section. See [contributing examples](CONTRIBUTING_EXAMPLES.md).
 
-Enterprise patterns are not included in the 23 GoF total.
+The enterprise examples are separate from the 23 GoF patterns.
