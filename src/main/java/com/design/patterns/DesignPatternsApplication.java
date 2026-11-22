@@ -6,12 +6,12 @@ public final class DesignPatternsApplication {
     }
 
     public static void main(String[] args) {
-        System.out.println("Java Design Patterns | 23 GoF patterns planned");
+        System.out.println("Java Design Patterns | All 23 GoF patterns implemented");
         for (PatternCategory category : PatternCategory.values()) {
             var patterns = PatternCatalog.byCategory(category);
             System.out.printf("%n%s (%d)%n", category, patterns.size());
             patterns.forEach(pattern -> System.out.println(" - " + pattern.name()));
         }
-        System.out.println("\nPattern implementations will be added in subsequent PRs.");
+        System.out.println("\nFor runnable examples and learning guides, see docs/USER_GUIDE.md.");
     }
 }
