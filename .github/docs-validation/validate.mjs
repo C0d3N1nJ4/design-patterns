@@ -1,6 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import mermaid from 'mermaid';
+import { JSDOM } from 'jsdom';
+
+// Mermaid's sanitizer requires browser DOM globals before the Mermaid module loads.
+const dom = new JSDOM('<!doctype html><html><body></body></html>', {
+  url: 'https://example.test'
+});
+globalThis.window = dom.window;
+globalThis.document = dom.window.document;
+globalThis.Node = dom.window.Node;
+globalThis.Element = dom.window.Element;
+const { default: mermaid } = await import('mermaid');
 
 const root = path.resolve(import.meta.dirname, '../..');
 const errors = [];
@@ -18,7 +28,7 @@ function visit(directory) {
 }
 visit(path.join(root, 'docs'));
 files.push(path.join(root, 'README.md'));
-mermaid.initialize({ startOnLoad: false, securityLevel: 'none' });
+mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
 
 let diagrams = 0;
 let links = 0;
