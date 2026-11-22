@@ -59,4 +59,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/st
 
 Useful for approval, order and payment lifecycles when permitted actions vary by state. For a handful of stable states, an enum and explicit transitions can be simpler.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

@@ -61,4 +61,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/me
 
 Use snapshots for editor undo, configuration revisions and in-memory checkpoints. Large snapshots consume memory, and snapshots are not a substitute for durable persistence.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

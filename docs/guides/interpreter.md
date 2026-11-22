@@ -59,4 +59,4 @@ Read the matching JUnit test at `src/test/java/com/design/patterns/behavioral/in
 
 Useful for small, constrained eligibility rules. This demo builds the expression tree in Java and does not parse untrusted text. For larger grammars, use a parser generator or dedicated rules engine.
 
-See the [user guide](../USER_GUIDE.md) for links to the other patterns.
+See the [user guide](../user-guide.md) for links to the other patterns.

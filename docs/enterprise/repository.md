@@ -55,4 +55,4 @@ Open the Java classes in `src/main/java/com/design/patterns/enterprise/repositor
 
 Use it to isolate business rules from persistence technologies. A real database adapter must handle transactions, constraints, pagination and errors. Do not introduce generic repositories just to hide useful domain operations.
 
-Explore the [enterprise learning path](README.md), or return to the [main user guide](../USER_GUIDE.md).
+Explore the [enterprise learning path](README.md), or return to the [main user guide](../user-guide.md).

@@ -1,8 +1,8 @@
 # Pattern catalog — all 28 executable examples
 
-Start with the [decision guide](DECISION_GUIDE.md) if you're choosing a pattern, or the [learning paths](LEARNING_PATHS.md) if you're working through them systematically.
+Start with the [decision guide](decision-guide.md) if you're choosing a pattern, or the [learning paths](learning-paths.md) if you're working through them systematically.
 
-The 23 **Gang of Four (GoF)** patterns are grouped below by original category. The five **enterprise Java** patterns are additional examples, not part of the GoF count. Every entry links to a user guide and a corresponding runnable demo in [the command index](RUN_EXAMPLES.md).
+The 23 **Gang of Four (GoF)** patterns are grouped below by original category. The five **enterprise Java** patterns are additional examples, not part of the GoF count. Every entry links to a user guide and a corresponding runnable demo in [the command index](run-examples.md).
 
 ## Creational (5)
 
@@ -56,4 +56,4 @@ The 23 **Gang of Four (GoF)** patterns are grouped below by original category. T
 
 [Spring dependency injection example](enterprise/spring-integration.md) demonstrates wiring the Repository pattern in a separate Maven profile; it does **not** add a 29th design pattern.
 
-To run the example classes, first execute `./mvnw compile` and then copy the command from [Run examples](RUN_EXAMPLES.md).
+To run the example classes, first execute `./mvnw compile` and then copy the command from [Run examples](run-examples.md).

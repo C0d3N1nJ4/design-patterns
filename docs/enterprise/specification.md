@@ -57,4 +57,4 @@ Open the Java classes in `src/main/java/com/design/patterns/enterprise/specifica
 
 Excellent for reusable domain eligibility rules. This example evaluates objects in memory: it does NOT translate rules into SQL and is not the Spring Data JPA Specification API. Avoid filtering whole database tables in memory; push scalable filtering into a query adapter.
 
-Explore the [enterprise learning path](README.md), or return to the [main user guide](../USER_GUIDE.md).
+Explore the [enterprise learning path](README.md), or return to the [main user guide](../user-guide.md).

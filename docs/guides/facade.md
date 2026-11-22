@@ -53,4 +53,4 @@ Provide a simple API around several payment, shipping or account-management subs
 
 This in-memory example is not a distributed transaction; production orders need rollback, idempotency and failure-handling rules.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.

@@ -59,4 +59,4 @@ Separate report formatting from export targets, or message priority from the cha
 
 Bridge introduces additional types; a single stable dimension can be represented more simply.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.

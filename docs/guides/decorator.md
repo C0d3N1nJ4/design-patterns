@@ -53,4 +53,4 @@ Compose validation, metrics, auditing or compression layers around a core servic
 
 Decorator order may matter. Avoid layers that obscure control flow or repeat side effects.
 
-See the [user guide](../USER_GUIDE.md) to compare this pattern with the others.
+See the [user guide](../user-guide.md) to compare this pattern with the others.
