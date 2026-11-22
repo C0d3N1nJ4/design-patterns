@@ -1,43 +1,44 @@
 # Java Design Patterns — hands-on Java 25 guide
 
-Learn design patterns through **runnable examples, focused tests, Mermaid UML and practical user guides**. No database, Docker or cloud credentials are needed.
+A hands-on collection of **all 23 Gang of Four design patterns**, with executable examples, JUnit tests, Mermaid diagrams and user-focused documentation.
 
-## Quick start
+## Get started
 
-1. Install JDK 25 and confirm `java -version`.
-2. Clone this repository and open its root.
-3. Build and run all tests with `./mvnw clean verify` (Windows: `mvnw.cmd clean verify`).
-4. Choose a lesson from the [user guide](docs/USER_GUIDE.md), then run the demo it describes.
-
-For example:
+Install JDK 25, clone this repository and run:
 
 ```bash
-java -cp target/classes com.design.patterns.structural.adapter.AdapterDemo
+./mvnw clean verify
+java -cp target/classes com.design.patterns.behavioral.command.CommandDemo
 ```
 
-Expected output: `LEGACY charged 1250 cents`. This is a simulated integration, not a real payment.
+Expected output:
 
-## Available patterns
+```text
+Light on: true
+After undo: false
+```
 
-**14 of 23 GoF patterns are implemented** with runnable examples and focused tests.
+On Windows use `mvnw.cmd clean verify` for the build. None of the sample applications require a database, Docker or external services.
+
+## Choose your pattern
 
 - **Creational (5/5):** [Builder](docs/guides/builder.md), [Singleton](docs/guides/singleton.md), [Factory Method](docs/guides/factory-method.md), [Abstract Factory](docs/guides/abstract-factory.md), [Prototype](docs/guides/prototype.md)
 - **Structural (7/7):** [Adapter](docs/guides/adapter.md), [Bridge](docs/guides/bridge.md), [Composite](docs/guides/composite.md), [Decorator](docs/guides/decorator.md), [Facade](docs/guides/facade.md), [Flyweight](docs/guides/flyweight.md), [Proxy](docs/guides/proxy.md)
-- **Behavioral (2/11):** [Strategy](docs/guides/strategy.md), [Chain of Responsibility](docs/guides/chain-of-responsibility.md)
+- **Behavioral (11/11):** [Strategy](docs/guides/strategy.md), [Chain of Responsibility](docs/guides/chain-of-responsibility.md), [Command](docs/guides/command.md), [Interpreter](docs/guides/interpreter.md), [Iterator](docs/guides/iterator.md), [Mediator](docs/guides/mediator.md), [Memento](docs/guides/memento.md), [Observer](docs/guides/observer.md), [State](docs/guides/state.md), [Template Method](docs/guides/template-method.md), [Visitor](docs/guides/visitor.md)
 
-Find a suitable pattern using the [problem-to-pattern table](docs/USER_GUIDE.md). Every lesson includes exact run commands, expected output, UML, tests, use cases and limitations.
+The [user guide](docs/USER_GUIDE.md) helps you choose a pattern based on the problem and provides all runnable commands. Each lesson includes expected output, tests, UML, practical applications and guidance on when **not** to use the pattern.
 
-The catalog executable lists all 23 *planned* GoF names, including the 9 not yet implemented:
+For a simple catalog listing:
 
 ```bash
 java -cp target/classes com.design.patterns.DesignPatternsApplication
 ```
 
-## More resources
+## More
 
-- [Hands-on user guide](docs/USER_GUIDE.md)
-- [Delivery roadmap](docs/ROADMAP.md)
-- [Contributing examples](docs/CONTRIBUTING_EXAMPLES.md)
-- [Reading Mermaid UML](docs/UML.md)
+- [User guide](docs/USER_GUIDE.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Contributor standards](docs/CONTRIBUTING_EXAMPLES.md)
+- [Mermaid UML notation](docs/UML.md)
 
-All current examples use plain Java. Optional enterprise Spring integrations are planned separately.
+Enterprise and Spring-specific examples are planned as optional follow-up work; they are not included in the GoF count.

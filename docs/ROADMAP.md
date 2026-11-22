@@ -1,19 +1,23 @@
 # Roadmap
 
-See the [hands-on user guide](USER_GUIDE.md) for how to run each implemented example.
+This project teaches all **23 classic Gang of Four patterns** with executable Java 25 demos, JUnit tests, UML and [user-focused guides](USER_GUIDE.md).
 
 | PR | Scope | Status |
 | --- | --- | --- |
-| #2 | Java 25, JUnit, CI and quality baseline | Merged |
-| #3 | Strategy, Builder, Chain of Responsibility | Merged |
+| #2 | Java 25, JUnit, CI and quality foundation | Merged |
+| #3 | Strategy, Builder and Chain of Responsibility | Merged |
 | #4 | Remaining four creational patterns | Merged |
-| #5 | Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy and Maven cleanup | In review |
-| #6 | Remaining nine behavioral patterns | Planned |
-| #7 | Optional enterprise Java integration patterns | Planned |
-| #8 | Cross-pattern comparisons and finished learning experience | Planned |
+| #5 | All seven structural patterns and Maven cleanup | Merged |
+| #6 | Nine remaining behavioral patterns, tests and guides | In review |
+| #7 | Optional enterprise architecture and Java integrations | Planned |
+| #8 | Comparisons, navigation and full learning experience | Planned |
 
-There are **14 implemented GoF patterns**: five creational, seven structural and two behavioral. The remaining nine behavioral patterns are planned.
+## GoF coverage
 
-## Maven cleanup decision
+All 23 examples exist in this PR: **5 creational, 7 structural and 11 behavioral**. Each example is self-contained and can be run with Java 25 after `./mvnw compile`. The optional enterprise patterns are **not** part of the GoF count.
 
-The historical Spring Boot `application.properties` was removed; `.gitignore` was simplified for a plain Java Maven project. The tracked Maven Wrapper JAR is intentionally **retained**: removing it would require the bootstrap script to download an extra binary before Maven can start, introducing an avoidable dependency on network availability, especially on Windows. Standard wrapper scripts and `pom.xml` remain unchanged.
+The new behavioral guides: [Command](guides/command.md), [Interpreter](guides/interpreter.md), [Iterator](guides/iterator.md), [Mediator](guides/mediator.md), [Memento](guides/memento.md), [Observer](guides/observer.md), [State](guides/state.md), [Template Method](guides/template-method.md), [Visitor](guides/visitor.md).
+
+## Maven baseline
+
+The historical Spring application properties were removed in PR #5. The Maven Wrapper scripts and JAR remain committed so users can bootstrap consistently on Windows, Linux and macOS.
