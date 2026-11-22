@@ -1,6 +1,17 @@
 # Java Design Patterns — hands-on Java 25 guide
 
-A hands-on collection of **all 23 Gang of Four design patterns**, with executable examples, JUnit tests, Mermaid diagrams and user-focused documentation.
+A hands-on collection of **all 23 Gang of Four patterns + 5 enterprise Java patterns**, with executable examples, JUnit tests, Mermaid diagrams and user-focused documentation.
+
+## Discover and use patterns
+
+| Goal | Start here |
+| --- | --- |
+| Pick a pattern for a problem | [Decision guide](docs/DECISION_GUIDE.md) |
+| Browse every example | [Pattern catalog](docs/PATTERN_CATALOG.md) |
+| Compare alternatives | [Comparison matrix](docs/PATTERN_COMPARISON.md) |
+| Follow structured lessons | [Learning paths](docs/LEARNING_PATHS.md) |
+| Copy every runnable command | [Run examples](docs/RUN_EXAMPLES.md) |
+
 
 ## Get started
 
@@ -35,6 +46,12 @@ java -cp target/classes com.design.patterns.DesignPatternsApplication
 ```
 
 ## More
+
+- [Pattern catalog](docs/PATTERN_CATALOG.md)
+- [Decision guide](docs/DECISION_GUIDE.md)
+- [Comparison matrix](docs/PATTERN_COMPARISON.md)
+- [Learning paths](docs/LEARNING_PATHS.md)
+- [Run examples](docs/RUN_EXAMPLES.md)
 
 - [User guide](docs/USER_GUIDE.md)
 - [Roadmap](docs/ROADMAP.md)

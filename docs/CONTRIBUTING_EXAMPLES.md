@@ -22,3 +22,12 @@ Prefer meaningful return values and state assertions over testing println statem
 - [ ] Add Mermaid diagram and trade-off notes
 - [ ] Run `./mvnw clean verify`
 - [ ] Ensure there are no hidden credentials or third-party services
+
+## Guide navigation and CI verification
+
+- Link new guides from the [catalog](PATTERN_CATALOG.md) and [run index](RUN_EXAMPLES.md).
+- Update the [decision guide](DECISION_GUIDE.md) or [comparison matrix](PATTERN_COMPARISON.md) when the pattern changes a decision trade-off.
+- Cover the **problem, executable demo, expected output, tested behavior, UML diagram and limitations**.
+- Mermaid diagrams must pass the parser pinned in `.github/docs-validation/package.json`.
+- Use relative paths for links to other repository documents.
+- Run `./mvnw clean verify` and `npm install --prefix .github/docs-validation && node .github/docs-validation/validate.mjs` before opening a PR. Node is only used for documentation checks; the Java examples remain framework-free.
