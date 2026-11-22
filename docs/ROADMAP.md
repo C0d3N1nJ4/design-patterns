@@ -1,33 +1,19 @@
-# Implementation roadmap
+# Roadmap
 
-This repository is a hands-on [Java 25 user guide](USER_GUIDE.md) and executable collection of the 23 Gang of Four (GoF) patterns, plus optional enterprise examples.
+See the [hands-on user guide](USER_GUIDE.md) for how to run each implemented example.
 
-| PR | Outcome | State |
+| PR | Scope | Status |
 | --- | --- | --- |
-| #2 | Java 25, catalog, JUnit, CI and quality foundation | Merged |
-| #3 | Strategy, Builder and Chain of Responsibility with runnable demos and user guides | Merged |
-| #4 | Singleton, Factory Method, Abstract Factory and Prototype | Draft — awaiting review |
-| #5 | Seven structural patterns | Planned |
+| #2 | Java 25, JUnit, CI and quality baseline | Merged |
+| #3 | Strategy, Builder, Chain of Responsibility | Merged |
+| #4 | Remaining four creational patterns | Merged |
+| #5 | Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy and Maven cleanup | In review |
 | #6 | Remaining nine behavioral patterns | Planned |
-| #7 | Enterprise examples: Repository, Specification, Retry, Circuit Breaker, CQRS and optional Spring integrations | Planned |
-| #8 | Catalog navigation, comparisons and polished learning experience | Planned |
+| #7 | Optional enterprise Java integration patterns | Planned |
+| #8 | Cross-pattern comparisons and finished learning experience | Planned |
 
-## Learn what's implemented
+There are **14 implemented GoF patterns**: five creational, seven structural and two behavioral. The remaining nine behavioral patterns are planned.
 
-Seven patterns have executable examples and step-by-step guides:
+## Maven cleanup decision
 
-- [Builder](guides/builder.md)
-- [Singleton](guides/singleton.md)
-- [Factory Method](guides/factory-method.md)
-- [Abstract Factory](guides/abstract-factory.md)
-- [Prototype](guides/prototype.md)
-- [Strategy](guides/strategy.md)
-- [Chain of Responsibility](guides/chain-of-responsibility.md)
-
-The CLI catalog includes the remaining sixteen **planned** patterns. Listing a pattern does not mean its implementation is complete.
-
-## How new lessons are added
-
-Every pattern includes a practical problem, dependency-free runnable example, expected output, JUnit tests (including failure scenarios), Mermaid UML and trade-offs. See [the example guide](CONTRIBUTING_EXAMPLES.md).
-
-The original 2023 experimental branches supplied the first three scenarios, recovered and refactored in PR #3. Future enterprise examples are distinct from the 23 GoF patterns.
+The historical Spring Boot `application.properties` was removed; `.gitignore` was simplified for a plain Java Maven project. The tracked Maven Wrapper JAR is intentionally **retained**: removing it would require the bootstrap script to download an extra binary before Maven can start, introducing an avoidable dependency on network availability, especially on Windows. Standard wrapper scripts and `pom.xml` remain unchanged.

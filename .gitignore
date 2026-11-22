@@ -1,33 +1,24 @@
-HELP.md
+# Maven and generated outputs
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+build/
+*.class
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDE metadata
+.idea/
 *.iml
 *.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+*.iws
 .vscode/
+.project
+.classpath
+.settings/
+.factorypath
+.apt_generated/
+nbproject/private/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Keep Maven Wrapper files tracked under .mvn/wrapper/
